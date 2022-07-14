@@ -9,7 +9,6 @@ jobs: # a basic unit of work in a run
       - run:
           name: Run Unit Tests
           command: xcodebuild test
-           -project Circle-Ci-Test-App/Circle-Ci-Test-App.xcodeproj
            -scheme Circle-Ci-Test-App
            -destination 'platform=iOS Simulator,name=iPhone 12,OS=15.5' 
 
@@ -21,7 +20,7 @@ jobs: # a basic unit of work in a run
       - run:
           # build our application
           name: Build Application
-          command: xcodebuild -project Circle-Ci-Test-App/Circle-Ci-Test-App.xcodeproj
+          command: xcodebuild
       - run:
           # compress Xcode's build output so that it can be stored as an artifact
           name: Compress app for storage
