@@ -1,23 +1,19 @@
 version: 2.1
 
-orbs:
-  ios: wordpress-mobile/ios@1.0.21
-
 jobs:
-  build-and-test:
+  test:
     macos:
       xcode: 13.4.1
     steps:
-      - run: gem install fastlane
-      - run: fastlane scan
+      - checkout
+      - run:
+          name: Run tests
+          command: fastlane scan
+          environment:
+            SCAN_DEVICE: iPhone 12
+            SCAN_SCHEME: Circle-Ci-Test-App
 
 workflows:
     test-workflow:
       jobs:
-        - ios/test:
-            xcode-version: '13.4.1' 
-            project: Circle-Ci-Test-App.xcodeproj 
-            scheme: Circle-Ci-Test-App 
-            configuration: Debug 
-            ios-version: '15.5' 
-            device: iPhone 12
+        - test
