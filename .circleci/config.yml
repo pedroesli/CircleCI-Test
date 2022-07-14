@@ -6,7 +6,7 @@ jobs:
       xcode: 13.4.1
     steps:
       - run: gem install fastlane
-      - run: fastlane scan --project Circle-Ci-Test-App.xcodeproj
+      - run: fastlane scan
 
 workflows:
   test_build:
