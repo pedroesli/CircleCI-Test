@@ -8,10 +8,7 @@ jobs:
       - checkout
       - run:
           name: Run tests
-          command: fastlane scan
-          environment:
-            SCAN_DEVICE: iPhone 12
-            SCAN_SCHEME: Circle-Ci-Test-App
+          command: xcodebuild test -scheme Circle-Ci-Test-App -destination 'platform=iOS Simulator,name=iPhone 12,OS=15.5' -configuration 'Debug' 
 
 workflows:
     test-workflow:
