@@ -8,7 +8,7 @@ jobs: # a basic unit of work in a run
       - checkout  # pull down code from your version control system.
       - run:
           name: Run Unit Tests
-          command: xcodebuild test -scheme circleci-demo-macos
+          command: xcodebuild test -scheme Circle-Ci-Test-App -destination 'platform=iOS Simulator,name=iPhone 12,OS=15.5'
 
   build:
     macos:
