@@ -1,5 +1,8 @@
 version: 2.1
 
+orbs:
+  ios: wordpress-mobile/ios@1.0.21
+
 jobs:
   build-and-test:
     macos:
@@ -9,6 +12,12 @@ jobs:
       - run: fastlane scan
 
 workflows:
-  test_build:
-    jobs:
-      - build-and-test
+    test-workflow:
+      jobs:
+        - ios/test:
+            xcode-version: '13.4.1' 
+            project: Circle-Ci-Test-App.xcodeproj 
+            scheme: Circle-Ci-Test-App 
+            configuration: Debug 
+            ios-version: '15.5' 
+            device: iPhone 12
