@@ -11,7 +11,18 @@
 		37381806288066D300D40AAB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37381805288066D300D40AAB /* ContentView.swift */; };
 		37381808288066D600D40AAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37381807288066D600D40AAB /* Assets.xcassets */; };
 		3738180B288066D600D40AAB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3738180A288066D600D40AAB /* Preview Assets.xcassets */; };
+		3738181828806C3B00D40AAB /* Circle_Ci_Test_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3738181728806C3B00D40AAB /* Circle_Ci_Test_AppTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3738181928806C3B00D40AAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 373817F8288066D200D40AAB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 373817FF288066D200D40AAB;
+			remoteInfo = "Circle-Ci-Test-App";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		37381800288066D300D40AAB /* Circle-Ci-Test-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Circle-Ci-Test-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -19,10 +30,19 @@
 		37381805288066D300D40AAB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		37381807288066D600D40AAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3738180A288066D600D40AAB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3738181528806C3B00D40AAB /* Circle-Ci-Test-AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Circle-Ci-Test-AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3738181728806C3B00D40AAB /* Circle_Ci_Test_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Circle_Ci_Test_AppTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		373817FD288066D200D40AAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3738181228806C3B00D40AAB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -36,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				37381802288066D300D40AAB /* Circle-Ci-Test-App */,
+				3738181628806C3B00D40AAB /* Circle-Ci-Test-AppTests */,
 				37381801288066D300D40AAB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				37381800288066D300D40AAB /* Circle-Ci-Test-App.app */,
+				3738181528806C3B00D40AAB /* Circle-Ci-Test-AppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,6 +89,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		3738181628806C3B00D40AAB /* Circle-Ci-Test-AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				3738181728806C3B00D40AAB /* Circle_Ci_Test_AppTests.swift */,
+			);
+			path = "Circle-Ci-Test-AppTests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -87,6 +117,24 @@
 			productReference = 37381800288066D300D40AAB /* Circle-Ci-Test-App.app */;
 			productType = "com.apple.product-type.application";
 		};
+		3738181428806C3B00D40AAB /* Circle-Ci-Test-AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3738181B28806C3B00D40AAB /* Build configuration list for PBXNativeTarget "Circle-Ci-Test-AppTests" */;
+			buildPhases = (
+				3738181128806C3B00D40AAB /* Sources */,
+				3738181228806C3B00D40AAB /* Frameworks */,
+				3738181328806C3B00D40AAB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3738181A28806C3B00D40AAB /* PBXTargetDependency */,
+			);
+			name = "Circle-Ci-Test-AppTests";
+			productName = "Circle-Ci-Test-AppTests";
+			productReference = 3738181528806C3B00D40AAB /* Circle-Ci-Test-AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -99,6 +147,10 @@
 				TargetAttributes = {
 					373817FF288066D200D40AAB = {
 						CreatedOnToolsVersion = 13.4.1;
+					};
+					3738181428806C3B00D40AAB = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 373817FF288066D200D40AAB;
 					};
 				};
 			};
@@ -116,6 +168,7 @@
 			projectRoot = "";
 			targets = (
 				373817FF288066D200D40AAB /* Circle-Ci-Test-App */,
+				3738181428806C3B00D40AAB /* Circle-Ci-Test-AppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -127,6 +180,13 @@
 			files = (
 				3738180B288066D600D40AAB /* Preview Assets.xcassets in Resources */,
 				37381808288066D600D40AAB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3738181328806C3B00D40AAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,7 +202,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3738181128806C3B00D40AAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3738181828806C3B00D40AAB /* Circle_Ci_Test_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3738181A28806C3B00D40AAB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 373817FF288066D200D40AAB /* Circle-Ci-Test-App */;
+			targetProxy = 3738181928806C3B00D40AAB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		3738180C288066D600D40AAB /* Debug */ = {
@@ -317,6 +393,42 @@
 			};
 			name = Release;
 		};
+		3738181C28806C3B00D40AAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L6B3W3NNQ3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pedroesli.Circle-Ci-Test-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Circle-Ci-Test-App.app/Circle-Ci-Test-App";
+			};
+			name = Debug;
+		};
+		3738181D28806C3B00D40AAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L6B3W3NNQ3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pedroesli.Circle-Ci-Test-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Circle-Ci-Test-App.app/Circle-Ci-Test-App";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -334,6 +446,15 @@
 			buildConfigurations = (
 				3738180F288066D600D40AAB /* Debug */,
 				37381810288066D600D40AAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3738181B28806C3B00D40AAB /* Build configuration list for PBXNativeTarget "Circle-Ci-Test-AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3738181C28806C3B00D40AAB /* Debug */,
+				3738181D28806C3B00D40AAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
