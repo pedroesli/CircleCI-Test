@@ -6,21 +6,19 @@ jobs: # a basic unit of work in a run
       xcode: 13.4.1 # indicate your selected version of Xcode
     steps: # a series of commands to run
       - checkout  # pull down code from your version control system.
-      - run: cd Circle-Ci-Test-App
       - run:
           name: Run Unit Tests
-          command: xcodebuild test -scheme Circle-Ci-Test-App
+          command: xcodebuild test -project Circle-Ci-Test-App/Circle-Ci-Test-App.xcodeproj -scheme Circle-Ci-Test-App
 
   build:
     macos:
       xcode: 13.4.1 # indicate your selected version of Xcode
     steps:
       - checkout
-      - run: cd Circle-Ci-Test-App
       - run:
           # build our application
           name: Build Application
-          command: xcodebuild
+          command: xcodebuild -project Circle-Ci-Test-App/Circle-Ci-Test-App.xcodeproj
       - run:
           # compress Xcode's build output so that it can be stored as an artifact
           name: Compress app for storage
