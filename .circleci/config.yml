@@ -1,38 +1,18 @@
 version: 2.1
 
 jobs: # a basic unit of work in a run
-  test: # your job name
+  build-and-test:
     macos:
-      xcode: 13.4.1 # indicate your selected version of Xcode
-    steps: # a series of commands to run
-      - checkout  # pull down code from your version control system.
-      - run:
-          name: Run Unit Tests
-          command: xcodebuild test
-           -scheme Circle-Ci-Test-App
-           -destination 'platform=iOS Simulator,name=iPhone 12,OS=15.5' 
-
-  build:
-    macos:
-      xcode: 13.4.1 # indicate your selected version of Xcode
+      xcode: 13.4.1
     steps:
-      - checkout
       - run:
-          # build our application
-          name: Build Application
-          command: xcodebuild -allowProvisioningUpdates
-      - run:
-          # compress Xcode's build output so that it can be stored as an artifact
-          name: Compress app for storage
-          command: zip -r app.zip build/Release/circleci-demo-macos.app
-      - store_artifacts: # store this build output. Read more: https://circleci.com/docs/artifacts/
-          path: app.zip
-          destination: app
+          name: Run tests
+          command: fastlane scan
+          environment:
+            SCAN_DEVICE: iPhone 12
+            SCAN_SCHEME: Circle-Ci-Test-App
 
 workflows:
   test_build:
     jobs:
-      - test
-      - build:
-          requires: 
-            - test
+      - build-and-test
