@@ -1,6 +1,14 @@
 version: 2.1
 
 jobs:
+  test-flight:
+    macos:
+      xcode: 13.4.1
+    steps:
+      - checkout
+      - run:
+          name: Deploy to testflight
+          command: fastlane beta
   test:
     macos:
       xcode: 13.4.1
@@ -14,3 +22,6 @@ workflows:
     test-workflow:
       jobs:
         - test
+        - test-flight:
+            requires:
+              - test
